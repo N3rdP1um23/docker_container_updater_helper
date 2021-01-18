@@ -18,7 +18,9 @@ The script, once setup, will help any user quickly and easily update all or spec
 
 ## Usage Example
 If no parameters are provided, all containers will be updated. Do to so, run the following command
+
 `> dockerupdate` 
 
 If you'd like to update a list of specific containers, feel free to provide a list of container names as follows
+
 `> dockerupdate container_name1 container_name2 container_name3` 
