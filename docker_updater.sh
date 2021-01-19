@@ -5,8 +5,12 @@
 # N3rdP1um23
 # January 18, 2020
 # The following file is used to handle updating either all docker containers or only ones specified
+# https://github.com/N3rdP1um23/docker_container_updater_helper
 #
 ###
+
+# Execute the script in the same folder the script resides in (alows relative execution)
+cd $( dirname "${BASH_SOURCE[0]}" )
 
 # Check to see if there are any arguments
 if [ "$#" -lt 1 ]; then
