@@ -18,9 +18,7 @@ if [ "$#" -lt 1 ]; then
     echo "No arguments provided. Starting normal Docker container updates"
 
     # Execute the Docker update
-    docker-compose pull
-    docker-compose up -d
-    docker system prune -af --volumes
+    docker-compose pull && docker-compose up -d && docker system prune -af --volumes
 
     # Display a status message
     echo "Finished Docker container updates"
@@ -31,9 +29,7 @@ elif [ "$#" -ge 1 ]; then
         echo "Updating ${container} container"
 
         # Execute the Docker update
-        docker-compose pull ${container}
-        docker-compose up -d ${container}
-        docker system prune -af --volumes
+        docker-compose pull ${container} && docker-compose up -d ${container} && docker system prune -af --volumes
 
         # Display a status message
         echo "Finished ${container} container updates"
